@@ -1,21 +1,28 @@
+/* The 'partial-no-import' rule won't work if linting in a code string without an actual file. */
+/* stylelint-disable scss/partial-no-import */
 @import url("x.css");
 @import url("y.css");
+
+$color-grey: #333;
+$break-resolution-dpi: 192dpi;
+$break-resolution-dppx: 2dppx;
+$break-portrait: portrait;
 
 /**
  * Multi-line comment
  */
 
 .pv-m-1,
-.pv-e-2,
-.pv-m--3[type="text"] {
+.pv-e-2--aa--aaaa_aaa--aaas__aaaa,
+.pv-m-3[type="text"] {
   background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
   box-sizing: border-box;
   display: block;
-  color: #333;
+  color: $color-grey;
 }
 
 .pv-h-a,
-.pv-m--b:not(:first-child) {
+.pv-m-a--b:not(:first-child) {
   /* disabling for testing */
   /* stylelint-disable-next-line */
   padding: 10px !important;
@@ -43,7 +50,7 @@
   }
 }
 
-@media (orientation: portrait), projection and (color) {
+@media (orientation: $break-portrait), projection and (color) {
   .pv-m-i + .pv-h-ii {
     background: color(rgb(0, 0, 0) lightness(50%));
     font-family: helvetica, "arial black", sans-serif;
@@ -52,8 +59,8 @@
 
 /* Flush single line comment */
 @media
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+  screen and (min-resolution: $break-resolution-dpi),
+  screen and (min-resolution: $break-resolution-dppx) {
   .pv {
     background-image:
       repeating-linear-gradient(

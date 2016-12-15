@@ -14,14 +14,30 @@ npm install --save-dev stylelint-config-pv
 
 We export two configurations for usage in projects.
 
-### stylelint-config-pv
+### CSS + SCSS rules
 
-Our default export contains all of our Stylelint rules, including BEM and SCSS plugins.
-Add `"extends": "pv"` to your .stylelintrc:
+Our default export contains all of our Stylelint rules, including SCSS plugins.
+Add an `"extends": ` array to your .stylelintrc:
 
 ```
 {
-  "extends": "pv",
+  "extends": [
+    "stylelint-config-pv"
+  ],
+  "rules": {
+    // you can overwrite individual rules here
+  }
+}
+
+### CSS runles only rules
+
+Alternatively, if you just want the CSS rules, you can just add:
+
+```
+{
+  "extends": [
+    "stylelint-config-pv/plain-css"
+  ],
   "rules": {
     // you can overwrite individual rules here
   }

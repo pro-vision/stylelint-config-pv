@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
@@ -44,7 +44,9 @@
     "remark-cli": "^2.0.0",
     "remark-preset-lint-consistent": "^1.0.0",
     "remark-preset-lint-recommended": "^1.0.0",
-    "stylelint": "^7.6.0"
+    "stylelint": "^7.6.0",
+    "stylelint-declaration-use-variable": "^1.6.0",
+    "stylelint-scss": "^1.4.1"
   },
   "peerDependencies": {
     "stylelint": "^7.6.0"
