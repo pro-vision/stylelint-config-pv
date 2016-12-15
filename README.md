@@ -36,6 +36,6 @@ for information about individual rules.
 There is [a Sublime Linter plugin](https://github.com/vieron/stylelint-webpack-plugin) for Stylelint.
 
 ## WebStorm Integration
-Accordinog to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins),
+According to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins),
 
 > Version 2016.3 onwards has built-in support for stylelint.
