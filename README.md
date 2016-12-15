@@ -33,7 +33,7 @@ for information about individual rules.
 
 ## Sublime Text Integration
 
-There is ]a Sublime Linter plugin](https://github.com/vieron/stylelint-webpack-plugin) for Stylelint.
+There is [a Sublime Linter plugin](https://github.com/vieron/stylelint-webpack-plugin) for Stylelint.
 
 ## WebStorm Integration
 Accordinog to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins),
