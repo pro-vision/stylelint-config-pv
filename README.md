@@ -12,11 +12,11 @@ npm install --save-dev stylelint-config-pv
 
 ## Usage
 
-We export two ESLint configurations for usage in projects.
+We export two configurations for usage in projects.
 
-### eslint-config-pv
+### stylelint-config-pv
 
-Our default export contains all of our ESLint rules, including BEM and SCSS plugins.
+Our default export contains all of our Stylelint rules, including BEM and SCSS plugins.
 Add `"extends": "pv"` to your .stylelintrc:
 
 ```
