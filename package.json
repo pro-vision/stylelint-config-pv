@@ -36,6 +36,7 @@
   ],
   "devDependencies": {
     "eslint": "^3.1.1",
+    "eslint-config-pv": "^1.0.0",
     "eslint-config-stylelint": "^6.0.0",
     "jest": "^17.0.3",
     "npm-run-all": "^3.0.0",
@@ -49,6 +50,7 @@
     "stylelint": "^7.6.0"
   },
   "scripts": {
+    "lint-testfile": "stylelint --config index.js __tests__/valid-css.css",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:md": "remark . --quiet --frail",
     "lint": "npm-run-all --parallel lint:*",

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 module.exports = {
   "rules": {
@@ -14,8 +14,8 @@ module.exports = {
     "at-rule-semicolon-newline-after": "always",
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": ["always", {
-        "ignoreAtRules": ["if", "else"]
-      }],
+      "ignoreAtRules": ["if", "else"]
+    }],
     "block-closing-brace-newline-before": "always-multi-line",
     "block-closing-brace-space-before": "always-single-line",
     "block-no-empty": true,
@@ -46,7 +46,7 @@ module.exports = {
     }],
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
-    "declaration-block-no-duplicate-properties": [ true, {
+    "declaration-block-no-duplicate-properties": [true, {
       "ignore": ["consecutive-duplicates-with-different-values"]
     }],
     "declaration-block-no-redundant-longhand-properties": true,
@@ -117,7 +117,9 @@ module.exports = {
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
-    "selector-class-pattern": "smc(-[meh]-[a-z_0-9-]+)?",
+    "selector-class-pattern": ["^[a-z]{2,5}(-[meh]-[a-z_0-9-]+)?$", {
+      "message": "Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-z_0-9-]+)?$/"
+    }],
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
@@ -148,4 +150,4 @@ module.exports = {
     "value-list-max-empty-lines": 0,
     "value-no-vendor-prefix": true
   }
-}
+};
