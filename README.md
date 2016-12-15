@@ -21,11 +21,14 @@ Add an `"extends": ` array to your .stylelintrc:
 
 ```
 {
-  "extends": "stylelint-config-pv",
+  "extends": [
+    "stylelint-config-pv"
+  ],
   "rules": {
     // you can overwrite individual rules here
   }
 }
+```
 
 ### CSS runles only rules
 
@@ -33,7 +36,9 @@ Alternatively, if you just want the CSS rules, you can just add:
 
 ```
 {
-  "extends": "stylelint-config-pv/plain-css",
+  "extends": [
+    "stylelint-config-pv/plain-css"
+  ],
   "rules": {
     // you can overwrite individual rules here
   }
