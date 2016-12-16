@@ -39,6 +39,7 @@
     "eslint-config-pv": "^1.0.0",
     "eslint-config-stylelint": "^6.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "github-release-from-changelog": "1.2.1",
     "jest": "^17.0.3",
     "npm-run-all": "^3.0.0",
     "npmpub": "^3.0.1",
