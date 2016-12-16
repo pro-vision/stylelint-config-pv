@@ -7,11 +7,4 @@ npm-debug.log
 *.idea
 *.sublime-project
 *.sublime-workspace
-
-# Ignore generated resources
-
-_src/**/*.css
-_src/**/*.css.map
-
 .DS_Store
-build.json
