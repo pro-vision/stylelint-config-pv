@@ -59,7 +59,7 @@
     "lint:md": "remark . --quiet --frail",
     "lint": "npm-run-all --parallel lint:*",
     "pretest": "npm run lint",
-    "release": "npmpub --no-release",
+    "release": "npmpub",
     "test": "jest",
     "watch": "jest --watch"
   },
