@@ -1,3 +1,7 @@
+# 0.2.3
+
+-   Fixed: added files array to package.json
+
 # 0.2.2
 
 -   Fixed: package.json repository field
