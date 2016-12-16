@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pv",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
@@ -12,6 +12,7 @@
     "url": "http://www.pro-vision.de"
   },
   "files": [
+    "index.js",
     "plain-css.js",
     "scss.js"
   ],
@@ -35,9 +36,6 @@
     "url": "git+https://github.com/pro-vision/stylelint-config-pv.git"
   },
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "devDependencies": {
     "eslint": "^3.1.1",
     "eslint-config-pv": "^1.0.0",

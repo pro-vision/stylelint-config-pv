@@ -1,4 +1,4 @@
-# 0.2.3
+# 0.2.4
 
 -   Fixed: added files array to package.json
 
