@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pv",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
@@ -28,7 +28,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pro-vision/style-config-pv.git"
+    "url": "git+https://github.com/pro-vision/stylelint-config-pv.git"
   },
   "main": "index.js",
   "files": [
