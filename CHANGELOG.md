@@ -1,3 +1,7 @@
+# 0.2.5
+
+-   Fixed: added border- properties
+
 # 0.2.4
 
 -   Fixed: added files array to package.json

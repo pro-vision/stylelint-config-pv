@@ -4,7 +4,7 @@ module.exports = {
     "stylelint-scss"
   ],
   "rules": {
-    "sh-waqar/declaration-use-variable": ["color", "background-color", "font"],
+    "sh-waqar/declaration-use-variable": ["color", "background-color", "font", "/^border.*/"],
     "scss/at-extend-no-missing-placeholder": true,
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": ["scss"],
