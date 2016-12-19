@@ -1,3 +1,7 @@
+# 0.2.6
+
+-   Fixed: made pattern case insenstive
+
 # 0.2.5
 
 -   Fixed: added border- properties

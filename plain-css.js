@@ -117,8 +117,8 @@ module.exports = {
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
-    "selector-class-pattern": ["^[a-z]{2,5}(-[meh]-[a-z_0-9-]+)?$", {
-      "message": "Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-z_0-9-]+)?$/"
+    "selector-class-pattern": ["^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$", {
+      "message": "Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$/"
     }],
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
