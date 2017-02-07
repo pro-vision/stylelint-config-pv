@@ -1,4 +1,4 @@
-"use strict";
+
 
 const stylelint = require("stylelint");
 const fs = require("fs");
@@ -19,7 +19,7 @@ describe("flags no warnings with valid css", () => {
 
   beforeEach(() => {
     result = stylelint.lint({
-      "code": validCss,
+      code: validCss,
       config,
     });
   });
@@ -36,7 +36,7 @@ describe("flags warnings with invalid css", () => {
 
   beforeEach(() => {
     result = stylelint.lint({
-      "code": invalidCss,
+      code: invalidCss,
       config,
     });
   });

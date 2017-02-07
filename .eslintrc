@@ -1,11 +1,7 @@
 {
   "extends": [
-    "pv"
+    "pv/es6"
   ],
   "rules": {
-    "quote-props": [2, "always", {
-      "keywords": false,
-      "unnecessary": true
-    }]
   }
 }
