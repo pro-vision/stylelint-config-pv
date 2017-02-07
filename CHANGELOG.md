@@ -1,3 +1,7 @@
+# 1.0.0
+
+-   Changed: licence. Ready for release
+
 # 0.2.6
 
 -   Fixed: made pattern case insenstive
