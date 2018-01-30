@@ -2,9 +2,15 @@
 /* changing rule because we want this file to be JSON-like, in case we need to copy it and paste it somewhere */
 module.exports = {
   "plugins": [
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-declaration-use-variable"
   ],
   "rules": {
+    "sh-waqar/declaration-use-variable": [
+      "color",
+      "background-color",
+      "font"
+    ],
     "scss/at-else-closing-brace-newline-after": null,
     "scss/at-else-closing-brace-space-after": null,
     "scss/at-else-empty-line-before": "never",
