@@ -69,9 +69,13 @@ module.exports = {
     "order/order": [
       "custom-properties",
       "dollar-variables",
+      {
+        "type": "at-rule",
+        "name": "extend",
+        "hasBlock": false
+      },
       "declarations",
-      "rules",
-      "at-rules"
+      "rules"
     ],
     "order/properties-order": [
       positioning.concat(displayAndBoxModel),

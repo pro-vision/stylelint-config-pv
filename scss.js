@@ -11,7 +11,7 @@ module.exports = {
     "scss/at-else-if-parentheses-space-before": "always",
     "scss/at-function-parentheses-space-before": "always",
     "scss/at-mixin-argumentless-call-parentheses": "always",
-    "scss/at-mixin-parentheses-space-before": "always",
+    "scss/at-mixin-parentheses-space-before": "never",
     "scss/at-extend-no-missing-placeholder": true,
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": ["scss"],
