@@ -5,8 +5,8 @@ module.exports = {
     "stylelint-scss"
   ],
   "rules": {
-    "scss/at-else-closing-brace-newline-after": "always",
-    "scss/at-else-closing-brace-space-after": "never",
+    "scss/at-else-closing-brace-newline-after": null,
+    "scss/at-else-closing-brace-space-after": null,
     "scss/at-else-empty-line-before": "never",
     "scss/at-else-if-parentheses-space-before": "always",
     "scss/at-function-parentheses-space-before": "always",
