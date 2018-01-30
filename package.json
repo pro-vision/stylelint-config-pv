@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pv",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
@@ -28,6 +28,10 @@
     {
       "name": "Fritz Stelluto",
       "email": "fstelluto@pro-vision.de"
+    },
+    {
+      "name": "Ingo Fahrentholz",
+      "email": "ifahrentholz@pro-vision.de"
     }
   ],
   "license": "Apache-2.0",
@@ -35,49 +39,22 @@
     "type": "git",
     "url": "git+https://github.com/pro-vision/stylelint-config-pv.git"
   },
+  "bugs": {
+    "url": "https://github.com/pro-vision/stylelint-config-pv/issues"
+  },
   "main": "index.js",
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-pv": "1.0.7",
-    "eslint-config-stylelint": "^6.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "github-release-from-changelog": "1.2.1",
-    "jest": "^17.0.3",
-    "npm-run-all": "^3.0.0",
-    "npmpub": "^3.0.1",
-    "remark-cli": "^2.0.0",
-    "remark-preset-lint-consistent": "^1.0.0",
-    "remark-preset-lint-recommended": "^1.0.0",
-    "stylelint": "^7.6.0",
-    "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-scss": "^1.4.1"
+    "eslint": "4.16.0"
   },
-  "peerDependencies": {
-    "stylelint": "^7.6.0"
+  "dependencies": {
+    "stylelint": "8.4.0",
+    "stylelint-config-idiomatic-order": "5.0.0",
+    "stylelint-declaration-use-variable": "1.6.0",
+    "stylelint-order": "0.8.0",
+    "stylelint-scss": "2.2.0"
   },
   "scripts": {
-    "lint-testfile": "stylelint --config index.js __tests__/valid-css.css",
-    "lint:js": "eslint . --ignore-path .gitignore",
-    "lint:md": "remark . --quiet --frail",
-    "lint": "npm-run-all --parallel lint:*",
-    "pretest": "npm run lint",
-    "release": "npmpub",
-    "test": "jest",
-    "watch": "jest --watch"
-  },
-  "eslintConfig": {
-    "extends": [
-      "stylelint"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "verbose": true
-  },
-  "remarkConfig": {
-    "presets": [
-      "lint-recommended",
-      "lint-consistent"
-    ]
+    "lint": "eslint --fix src.js",
+    "test": "node test.js"
   }
 }
