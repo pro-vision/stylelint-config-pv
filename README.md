@@ -10,6 +10,24 @@ _Inspired by Stylelint's own [stylelint-config-standard](https://github.com/styl
 npm install --save-dev --exact stylelint-config-pv
 ```
 
+## Prerequisite
+You obviously need stylelint installed. Unless you are only using the plain css rules, you will also need to
+install some plugins
+```
+# default
+npm i -DE stylelint  stylelint-scss stylelint-declaration-use-variable stylelint-order
+
+# plain CSS only
+npm i -DE stylelint
+
+# scss rules
+npm i -DE stylelint-scss stylelint-declaration-use-variable
+
+# idiomatic css
+npm i -DE stylelint-order
+```
+
+
 ## Usage
 
 We export two configurations for usage in projects, with the possibility to include or exclude Idiomatic CSS
