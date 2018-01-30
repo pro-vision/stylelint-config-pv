@@ -1,6 +1,17 @@
 /* eslint-disable no-console */
-var util = require("util");
-var config = require("./index");
+const util = require("util");
 
-console.log(util.inspect(config, false, 4));
-console.log("Config file properly loaded 👍");
+[
+  "./index.js",
+  "./declaration-use-variable.js",
+  "./plain-css.js",
+  "./order.js",
+  "./scss.js"
+].forEach((fileName) => {
+  const fileContent = require(fileName);
+  console.log(util.inspect(fileContent, false, 4)
+    .substr(0, 128));
+  console.log("...");
+  console.log(`File ${fileName} properly loaded 👍
+  `);
+});

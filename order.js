@@ -1,4 +1,4 @@
-/**
+/*
  * this is a copy of
  * https://github.com/ream88/stylelint-config-idiomatic-order/
  * which we couldn't install because it relies on stylelint-config-standard
@@ -6,35 +6,36 @@
  * https://github.com/stylelint/stylelint-config-recommended/issues/21
  */
 function trbl(prefix) {
-  var rules = [];
+  const rules = [];
 
   if (prefix) {
     rules.push(prefix);
-    prefix = prefix + "-";
-  } else {
+    prefix += "-";
+  }
+  else {
     prefix = "";
   }
 
   return rules.concat([
-    prefix + "top",
-    prefix + "right",
-    prefix + "bottom",
-    prefix + "left"
+    `${prefix}top`,
+    `${prefix}right`,
+    `${prefix}bottom`,
+    `${prefix}left`
   ]);
 }
 
 function minMax(suffix) {
-  return [suffix, "min-" + suffix, "max-" + suffix];
+  return [suffix, `min-${suffix}`, `max-${suffix}`];
 }
 
-var positioning = []
+const positioning = []
   .concat([
     "position",
     "z-index"
   ])
   .concat(trbl());
 
-var displayAndBoxModel = []
+const displayAndBoxModel = []
   .concat([
     "display",
     "overflow"
@@ -61,10 +62,10 @@ var displayAndBoxModel = []
   .concat(trbl("margin"));
 
 module.exports = {
-  "plugins": [
+  plugins: [
     "stylelint-order"
   ],
-  "rules": {
+  rules: {
     "order/order": [
       "custom-properties",
       "dollar-variables",
@@ -74,7 +75,7 @@ module.exports = {
     ],
     "order/properties-order": [
       positioning.concat(displayAndBoxModel),
-      { "unspecified": "bottomAlphabetical" }
+      { unspecified: "bottomAlphabetical" }
     ]
   }
 };
