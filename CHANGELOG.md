@@ -1,3 +1,14 @@
+# 2.0.1
+
+-    Changed: Compatible with stylelint 9.1.3
+-    Changed: order now includes comprehensive list of all CSS properties
+
+
+# 2.0.0
+
+-    Changed: Compatible with stylelint 8.4.0
+-    Added: introduced order plugin
+
 # 1.0.0
 
 -   Changed: licence. Ready for release
