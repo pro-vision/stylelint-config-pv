@@ -7,7 +7,7 @@ _Inspired by Stylelint's own [stylelint-config-standard](https://github.com/styl
 
 ## Installation
 ```bash
-npm install --save-dev --exact stylelint-config-pv
+npm i -DE stylelint-scss stylelint stylelint-order stylelint-declaration-use-variable stylelint-config-pv
 ```
 
 ## Prerequisite
