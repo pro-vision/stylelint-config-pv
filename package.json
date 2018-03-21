@@ -1,12 +1,9 @@
 {
   "name": "stylelint-config-pv",
   "version": "2.0.1",
-  "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
-  "keywords": [
-    "stylelint",
-    "stylelint-config",
-    "pro!vision"
-  ],
+  "description":
+    "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
+  "keywords": ["stylelint", "stylelint-config", "pro!vision"],
   "author": {
     "name": "pro!vision GmbH",
     "url": "http://www.pro-vision.de"
@@ -49,8 +46,7 @@
     "eslint": "4.16.0",
     "eslint-config-pv": "2.0.0",
     "eslint-plugin-import": "2.8.0",
-    "stylelint-test-rule-tape": "0.2.0",
-    "tape": "4.9.0"
+    "nodemon": "1.17.2"
   },
   "dependencies": {
     "stylelint": "8.4.0",
@@ -60,6 +56,7 @@
   },
   "scripts": {
     "lint": "eslint --fix *.js",
-    "test": "tape test"
+    "test": "node test/index.js",
+    "dev": "nodemon -e js,scss --watch test test/index.js"
   }
 }

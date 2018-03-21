@@ -1,4 +1,6 @@
 .my-m-selector {
+  $color-red: #f00;
+
   /* 0. extends */
   @extend %_someSelector;
 
@@ -14,11 +16,11 @@
   width: 300px;
   height: 200px;
   padding: 20px;
-  border: 1px solid #f00;
+  border: 1px solid $color-red;
   border-radius: 10px;
 
   /* 4. color */
-  color: #000;
+  color: $color-red;
   background: url("../resources/someImage.png") left top no-repeat
     transparent;
 
@@ -32,7 +34,7 @@
   /* 7. mixins */
   @include myMagicMixin(12px);
 
-  .sub_selector {
+  .my-m-subselector {
     /* 3. display + box */
     margin: 0 auto;
   }

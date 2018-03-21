@@ -1,0 +1,35 @@
+/* ERROR 0: Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$/ */
+.oh-dear-this-is-not-a-BEM-selector {
+  /* ERROR 3: Expected "top" to come before "cursor" (order/properties-order) */
+  cursor: pointer;
+
+  /* ERROR 1: Expected blockless @extend to come before declaration (order/order) */
+  @extend %_someSelector;
+
+  /* ERROR 2: Expected declaration to come before at-rule (order/order) */
+  @include myMagicMixin(12px);
+
+  top: 0;
+  left: 0;
+  display: block;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+
+  /* ERROR 5: Expected variable for "color". (sh-waqar/declaration-use-variable) */
+  color: #000;
+  background: url("../resources/someImage.png") left top no-repeat
+    transparent;
+  font-family: sans-serif;
+  font-size: 1.2em;
+
+  /* ERROR 4: Expected "position" to come before "font-size" (order/properties-order) */
+  position: absolute;
+
+  &:after {
+    /* 1. generated content */
+    content: "Hello World";
+  }
+}
