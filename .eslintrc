@@ -1,7 +1,6 @@
 {
-  "extends": [
-    "pv"
-  ],
+  "extends": ["pv"],
   "rules": {
+    "no-use-before-define": "off"
   }
 }
