@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pv",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
@@ -48,16 +48,18 @@
   "devDependencies": {
     "eslint": "4.16.0",
     "eslint-config-pv": "2.0.0",
-    "eslint-plugin-import": "2.8.0"
+    "eslint-plugin-import": "2.8.0",
+    "stylelint-test-rule-tape": "0.2.0",
+    "tape": "4.9.0"
   },
   "dependencies": {
     "stylelint": "8.4.0",
-    "stylelint-declaration-use-variable": "1.6.0",
+    "stylelint-declaration-use-variable": "1.6.1",
     "stylelint-order": "0.8.0",
     "stylelint-scss": "2.2.0"
   },
   "scripts": {
     "lint": "eslint --fix *.js",
-    "test": "node test.js"
+    "test": "tape test"
   }
 }

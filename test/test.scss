@@ -1,0 +1,44 @@
+.my-m-selector {
+  /* 0. extends */
+  @extend %_someSelector;
+
+  /* 1. generated content */
+
+  /* 2. position */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* 3. display + box */
+  display: block;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+
+  /* 4. color */
+  color: #000;
+  background: url("../resources/someImage.png") left top no-repeat
+    transparent;
+
+  /* 5. text */
+  font-family: sans-serif;
+  font-size: 1.2em;
+
+  /* 6. other */
+  cursor: pointer;
+
+  /* 7. mixins */
+  @include myMagicMixin(12px);
+
+  .sub_selector {
+    /* 3. display + box */
+    margin: 0 auto;
+  }
+
+  &:after {
+    /* 1. generated content */
+    content: "Hello World";
+  }
+}
