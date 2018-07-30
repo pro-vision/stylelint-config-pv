@@ -7,7 +7,8 @@ module.exports = {
         "blockless-after-same-name-blockless",
         "first-nested"
       ],
-      "ignore": ["after-comment"]
+      "ignore": ["after-comment"],
+      "ignoreAtRules": ["else"]
     }],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",

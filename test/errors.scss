@@ -1,15 +1,29 @@
-/* ERROR 0: Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$/ */
+@mixin myMagicMixin($size) {
+  @if $size == "12px" {
+    opacity: 0;
+  }
+
+  @else if $size == "13px" { /* ERROR 7: Unxpected empty line before @else (scss/at-else-empty-line-before) */
+    opacity: 0.5;
+  }
+  @else {
+    opacity: 1;
+    @include myOtherMixin($size); /* ERROR 0: Expected empty line before at-rule (at-rule-empty-line-before) */
+  }
+}
+
+/* ERROR 1: Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$/ */
 .oh-dear-this-is-not-a-BEM-selector {
   /* ERROR 3: Expected "top" to come before "cursor" (order/properties-order) */
   cursor: pointer;
 
-  /* ERROR 1: Expected blockless @extend to come before declaration (order/order) */
+  /* ERROR 2: Expected blockless @extend to come before declaration (order/order) */
   @extend %_someSelector;
 
-  /* ERROR 2: Expected declaration to come before at-rule (order/order) */
+  /* ERROR 3: Expected declaration to come before at-rule (order/order) */
   @include myMagicMixin(12px);
 
-  top: 0;
+  top: 0;/* ERROR 4: Expected "top" to come before "cursor" (order/properties-order) */
   left: 0;
   display: block;
   width: 300px;
@@ -18,14 +32,14 @@
   border: 1px solid #f00;
   border-radius: 10px;
 
-  /* ERROR 5: Expected variable for "color". (sh-waqar/declaration-use-variable) */
+  /* ERROR 6: Expected variable for "color". (sh-waqar/declaration-use-variable) */
   color: #000;
   background: url("../resources/someImage.png") left top no-repeat
     transparent;
   font-family: sans-serif;
   font-size: 1.2em;
 
-  /* ERROR 4: Expected "position" to come before "font-size" (order/properties-order) */
+  /* ERROR 5: Expected "position" to come before "font-size" (order/properties-order) */
   position: absolute;
 
   &:after {
