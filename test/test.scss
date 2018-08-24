@@ -1,3 +1,17 @@
+@mixin myMagicMixin($size) {
+  @if $size == "12px" {
+    opacity: 0;
+  }
+  @else if $size == "13px" {
+    opacity: 0.5;
+  }
+  @else {
+    opacity: 1;
+
+    @include myOtherMixin($size);
+  }
+}
+
 .my-m-selector {
   $color-red: #f00;
 
