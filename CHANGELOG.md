@@ -1,38 +1,41 @@
+# 2.0.2
+
+- Changed: Fix empty line rule before @else blocks
+
 # 2.0.1
 
--    Changed: Compatible with stylelint 9.1.3
--    Changed: order now includes comprehensive list of all CSS properties
-
+- Changed: Compatible with stylelint 9.1.3
+- Changed: order now includes comprehensive list of all CSS properties
 
 # 2.0.0
 
--    Changed: Compatible with stylelint 8.4.0
--    Added: introduced order plugin
+- Changed: Compatible with stylelint 8.4.0
+- Added: introduced order plugin
 
 # 1.0.0
 
--   Changed: licence. Ready for release
+- Changed: licence. Ready for release
 
 # 0.2.6
 
--   Fixed: made pattern case insenstive
+- Fixed: made pattern case insenstive
 
 # 0.2.5
 
--   Fixed: added border- properties
+- Fixed: added border- properties
 
 # 0.2.4
 
--   Fixed: added files array to package.json
+- Fixed: added files array to package.json
 
 # 0.2.2
 
--   Fixed: package.json repository field
+- Fixed: package.json repository field
 
 # 0.2.0
 
--   Fixed: publishing issues
+- Fixed: publishing issues
 
 # 0.1.0
 
--   Initial release
+- Initial release
