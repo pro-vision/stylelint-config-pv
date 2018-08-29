@@ -1,6 +1,10 @@
+# 2.0.3
+
+- Changed: Update README to match new package origin
+
 # 2.0.2
 
-- Deprecated: stylelint-config-pv was moved to @pro-vision/stylelint-config-pv
+- Changed: Fix empty line rule before @else blocks
 
 # 2.0.1
 
