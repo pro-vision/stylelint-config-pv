@@ -1,3 +1,7 @@
+# 2.0.4
+
+- Changed: Extend the scoped package in .stylelintrc
+
 # 2.0.3
 
 - Changed: Update README to match new package origin
