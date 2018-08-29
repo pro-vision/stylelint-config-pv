@@ -1,6 +1,6 @@
 # 2.0.2
 
-- Changed: Fix empty line rule before @else blocks
+- Deprecated: stylelint-config-pv was moved to @pro-vision/stylelint-config-pv
 
 # 2.0.1
 
