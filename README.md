@@ -41,7 +41,7 @@ Add an `"extends":` array to your .stylelintrc:
 ```
 {
   "extends": [
-    "stylelint-config-pv"
+    "@pro-vision/stylelint-config-pv"
   ],
   "rules": {
     // you can overwrite individual rules here
@@ -57,9 +57,9 @@ your project:
 ```
 {
   "extends": [
-    "stylelint-config-pv/plain-css",
-    "stylelint-config-pv/scss",
-    "stylelint-config-pv/order",
+    "@pro-vision/stylelint-config-pv/plain-css",
+    "@pro-vision/stylelint-config-pv/scss",
+    "@pro-vision/stylelint-config-pv/order",
   ],
   "rules": {
     // you can overwrite individual rules here
