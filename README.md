@@ -49,7 +49,7 @@ Add an `"extends":` array to your .stylelintrc:
 }
 ```
 
-### CSS runles only rules
+### CSS rules only rules
 
 Alternatively, you can import whatever combination of the following rules suits
 your project:
@@ -79,6 +79,8 @@ See
 
 There are [a Visual Studio Code plugin](https://github.com/shinnn/vscode-stylelint) and [a Sublime Linter plugin](https://github.com/vieron/stylelint-webpack-plugin) for Stylelint.
 
-According to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins),
+According to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins) current versions of WebStorm also support Stylelint. 
 
 > Version 2016.3 onwards has built-in support for stylelint.
+
+Furthermore there is support in [IntelliJ Ultimate](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html).
