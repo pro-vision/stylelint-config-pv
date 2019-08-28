@@ -31,7 +31,7 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "eslint": "5.9.0",
+    "eslint": "5.16.0",
     "eslint-config-pv": "2.2.0",
     "eslint-plugin-import": "2.14.0",
     "nodemon": "1.19.1"
