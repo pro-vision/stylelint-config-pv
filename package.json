@@ -40,7 +40,7 @@
     "stylelint": "9.10.1",
     "stylelint-declaration-use-variable": "1.7.0",
     "stylelint-order": "2.0.0",
-    "stylelint-scss": "3.4.0"
+    "stylelint-scss": "3.10.0"
   },
   "scripts": {
     "lint": "eslint --fix *.js",
