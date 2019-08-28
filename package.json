@@ -34,7 +34,7 @@
     "eslint": "5.9.0",
     "eslint-config-pv": "2.2.0",
     "eslint-plugin-import": "2.14.0",
-    "nodemon": "1.18.7"
+    "nodemon": "1.19.1"
   },
   "dependencies": {
     "stylelint": "9.10.1",
