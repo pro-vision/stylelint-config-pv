@@ -1,0 +1,10 @@
+sudo: false
+language: node_js
+notifications:
+  email: false
+node_js:
+  - "10.16.3"
+cache:
+  npm: false
+scripts:
+  - npm run test
