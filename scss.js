@@ -7,9 +7,16 @@ module.exports = {
   ],
   "rules": {
     "sh-waqar/declaration-use-variable": [
-      "color",
-      "background-color",
-      "font"
+      [
+        "color",
+        "background-color",
+        {
+          "ignoreValues": ["transparent", "inherit"]
+        }
+      ],
+      [
+        "font"
+      ],
     ],
     "scss/at-else-closing-brace-newline-after": null,
     "scss/at-else-closing-brace-space-after": null,

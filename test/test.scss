@@ -53,6 +53,14 @@
     margin: 0 auto;
   }
 
+  .my-e-element {
+    /* test inherit exception */
+    color: inherit;
+
+    /* test transparent exception */
+    background: transparent;
+  }
+
   &:after {
     /* 1. generated content */
     content: "Hello World";
