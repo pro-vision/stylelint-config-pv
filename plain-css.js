@@ -87,7 +87,12 @@ module.exports = {
     "function-whitespace-after": "always",
     "indentation": 2,
     "keyframe-declaration-no-important": true,
-    "length-zero-no-unit": true,
+    "length-zero-no-unit": [
+      true,
+      {
+        "ignore": ["custom-properties"],
+      }
+    ],
     "max-empty-lines": 1,
     "max-nesting-depth": 3,
     "media-feature-colon-space-after": "always",
