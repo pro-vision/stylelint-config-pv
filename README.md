@@ -1,44 +1,34 @@
 # @pro-vision/stylelint-config-pv
 
-This package provides pro!vision's [Stylelint](https://github.com/stylelint/stylelint) configuration as an extensible shared config. It follows the [Idiomatic CSS](https://github.com/necolas/idiomatic-css) for ordering properties.
-
-_Inspired by Stylelint's own [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)_
+This package provides pro!vision's [Stylelint](https://github.com/stylelint/stylelint) configuration as an extensible shared config. Most rules are inherited from [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) and [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss), it also follows the [Idiomatic CSS](https://github.com/necolas/idiomatic-css) for ordering properties .
 
 ## Installation
 
 ```bash
-npm i -DE stylelint-scss stylelint stylelint-order stylelint-declaration-use-variable @pro-vision/stylelint-config-pv
+npm i @pro-vision/stylelint-config-pv --save-dev
 ```
 
 ## Prerequisite
 
-You obviously need stylelint installed. Unless you are only using the plain css rules, you will also need to
-install some plugins
+You obviously need stylelint installed. If using the prettier rules, it is also expected that prettier is already installed.
 
-```
-# default
-npm i -DE stylelint  stylelint-scss stylelint-declaration-use-variable stylelint-order
+`@pro-vision/stylelint-config-pv` has all of its needed stylelint plugins as it's dependencies, in general you don't have to declare them. But if you want to update these dependencies or there is an issue due common dependencies with some of your other third party npm dependencies, then install these manually:
 
-# plain CSS only
-npm i -DE stylelint
-
-# scss rules
-npm i -DE stylelint-scss stylelint-declaration-use-variable
-
-# idiomatic css
-npm i -DE stylelint-order
+```bash
+npm i stylelint-config-clean-order stylelint-config-prettier stylelint-config-standard stylelint-config-standard-scss stylelint-declaration-strict-value stylelint-order stylelint-prettier stylelint-scss --save-dev
 ```
 
 ## Usage
 
-We export two configurations for usage in projects, with the possibility to include or exclude Idiomatic CSS
+We export Five configurations for usage in projects.
 
-### CSS + SCSS + Idioatic rules
+### All
 
-Our default export contains all of our Stylelint rules, including SCSS plugins.
+Our default export contains all of our Stylelint rules, including SCSS plugins, order related rules/plugins and configuration for prettier integration.
+
 Add an `"extends":` array to your .stylelintrc:
 
-```
+```js
 {
   "extends": [
     "@pro-vision/stylelint-config-pv"
@@ -49,15 +39,43 @@ Add an `"extends":` array to your .stylelintrc:
 }
 ```
 
-### CSS rules only rules
+### Plain CSS
 
-Alternatively, you can import whatever combination of the following rules suits
-your project:
+Suited fo plain css file. Extends [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rule set.
 
-```
+(This does not include the `order` module. Which can be added to the `extends` list if desired.)
+
+```js
 {
   "extends": [
-    "@pro-vision/stylelint-config-pv/plain-css",
+    "@pro-vision/stylelint-config-pv/plain-css"
+  ],
+  "rules": {
+    // you can overwrite individual rules here
+  }
+}
+```
+
+### SCSS
+
+Rules for SCSS code. This includes the `plain-css` rules. And [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss) with some modification.
+
+```js
+{
+  "extends": [
+    "@pro-vision/stylelint-config-pv/scss"
+  ],
+  "rules": {
+    // you can overwrite individual rules here
+  }
+}
+```
+
+Or use as
+
+```js
+{
+  "extends": [
     "@pro-vision/stylelint-config-pv/scss",
     "@pro-vision/stylelint-config-pv/order",
   ],
@@ -67,19 +85,49 @@ your project:
 }
 ```
 
+for i.e. all rules **except** prettier;
+
+### Order
+
+Adds the [stylelint-order](https://github.com/hudochenkov/stylelint-order) plugin with a rule set for a specific order of content.
+
+```js
+{
+  "extends": [
+    "@pro-vision/stylelint-config-pv/order"
+  ],
+  "rules": {
+    // you can overwrite individual rules here
+  }
+}
+```
+
+### Prettier
+
+Enables/Disables prettier related rules. Expects `prettier` to have been installed
+
+```js
+{
+  "extends": [
+    "@pro-vision/stylelint-config-pv/prettier"
+  ],
+  "rules": {
+    // you can overwrite individual rules here
+  }
+}
+```
+
 For information about individual rules see
-See
 
 - the [Stylelint rules reference](http://stylelint.io/user-guide/rules/)
 - the [SCSS linting rules](https://github.com/kristerkari/stylelint-scss#list-of-rules)
-- the [declaration use variable rule](https://github.com/sh-waqar/stylelint-declaration-use-variable)
-- the [order rules](https://github.com/hudochenkov/stylelint-order#list-of-rules)
+- the [properties order](stylelint-config-clean-order)
 
 ## Text editor integration
 
 There are [a Visual Studio Code plugin](https://github.com/shinnn/vscode-stylelint) and [a Sublime Linter plugin](https://github.com/vieron/stylelint-webpack-plugin) for Stylelint.
 
-According to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins) current versions of WebStorm also support Stylelint. 
+According to [the documentation](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins) current versions of WebStorm also support Stylelint.
 
 > Version 2016.3 onwards has built-in support for stylelint.
 
