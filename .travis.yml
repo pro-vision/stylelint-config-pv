@@ -1,10 +1,11 @@
-sudo: false
+os: linux
+dist: jammy
 language: node_js
 notifications:
   email: false
 node_js:
-  - "10.16.3"
+  - "18.12.1"
 cache:
   npm: false
-scripts:
+script:
   - npm run test
