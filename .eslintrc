@@ -1,5 +1,5 @@
 {
-  "extends": ["pv"],
+  "extends": ["@pro-vision/eslint-config-pv"],
   "rules": {
     "no-use-before-define": "off"
   }

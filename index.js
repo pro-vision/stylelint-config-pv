@@ -1,8 +1,8 @@
 module.exports = {
-  "extends": [
-    "./plain-css.js",
-    "./order.js",
+  extends: [
     "./scss.js",
+    "./order.js",
+    "./prettier.js",
   ],
-  rules: {}
+  rules: {},
 };
