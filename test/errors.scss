@@ -8,6 +8,7 @@
     opacity: 0.5;
   } @else {
     opacity: 1;
+
     @include myOtherMixin($size); /* ERROR 3: Expected blockless @include to come before declaration        order/order */
   }
 }

@@ -19,7 +19,6 @@ module.exports = {
         "ignoreAtRules": ["else"],
       },
     ],
-    "at-rule-semicolon-space-before": "never",
     "comment-no-empty": true,
     "custom-property-pattern": namingPatter,
     "declaration-colon-newline-after": null,

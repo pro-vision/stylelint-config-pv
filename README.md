@@ -15,7 +15,7 @@ You obviously need stylelint installed. If using the prettier rules, it is also 
 `@pro-vision/stylelint-config-pv` has all of its needed stylelint plugins as it's dependencies, in general you don't have to declare them. But if you want to update these dependencies or there is an issue due common dependencies with some of your other third party npm dependencies, then install these manually:
 
 ```bash
-npm i stylelint-config-clean-order stylelint-config-prettier stylelint-config-standard stylelint-config-standard-scss stylelint-declaration-strict-value stylelint-order stylelint-prettier stylelint-scss --save-dev
+npm i stylelint-config-clean-order stylelint-config-standard stylelint-config-standard-scss stylelint-declaration-strict-value stylelint-order stylelint-prettier stylelint-scss --save-dev
 ```
 
 ## Usage
