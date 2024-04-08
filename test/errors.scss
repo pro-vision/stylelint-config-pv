@@ -1,49 +1,45 @@
-@mixin myMagicMixin($size) {
+/* stylelint-disable prettier/prettier */
+@mixin myMagicMixin($size) { // ERROR 0: Expected naming to be BEM compatible (scss/at-mixin-pattern)
   @if $size == "12px" {
     opacity: 0;
-  }
+  } // ERROR 1: Expected newline after "}" of @if statement (scss/at-if-closing-brace-newline-after)
 
-  @else if $size == "13px" { /* ERROR 7: Unxpected empty line before @else (scss/at-else-empty-line-before) */
+  @else if $size == "13px" { /* ERROR 2: Unxpected empty line before @else (scss/at-else-empty-line-before) */
     opacity: 0.5;
-  }
-  @else {
+  } @else {
     opacity: 1;
-    @include myOtherMixin($size); /* ERROR 0: Expected empty line before at-rule (at-rule-empty-line-before) */
+
+    @include myOtherMixin($size); /* ERROR 3: Expected blockless @include to come before declaration        order/order */
   }
 }
 
-/* ERROR 1: Expected class selector to match pattern: /^[a-z]{2,5}(-[meh]-[a-zA-Z_0-9-]+)?$/ */
-.oh-dear-this-is-not-a-BEM-selector {
-  /* ERROR 3: Expected "top" to come before "cursor" (order/properties-order) */
+.oh-dear-this-is-not-a-BEM-selector { /* ERROR 4: Expected class selector */
   cursor: pointer;
 
-  /* ERROR 2: Expected blockless @extend to come before declaration (order/order) */
-  @extend %_someSelector;
+  @extend %_someSelector;/* ERROR 5: Expected blockless @extend to come before declaration (order/order) */
 
-  /* ERROR 3: Expected declaration to come before at-rule (order/order) */
   @include myMagicMixin(12px);
 
-  top: 0;/* ERROR 4: Expected "top" to come before "cursor" (order/properties-order) */
+  top: 0;
   left: 0;
   display: block;
   width: 300px;
   height: 200px;
   padding: 20px;
-  border: 1px solid #f00;
+  border: 1px solid #f00; /* ERROR 6: Expected variable, function or keyword for "#f00" of "border" (scale-unlimited/declaration-strict-value) */
   border-radius: 10px;
 
-  /* ERROR 6: Expected variable for "color". (sh-waqar/declaration-use-variable) */
-  color: #000;
+  /* ERROR 7: Expected variable, function or keyword for "#000" of "color" (scale-unlimited/declaration-strict-value) */
+  color: #000; // WARNING 8: Expected "color" to come before "border-radius" (order/properties-order)
   background: url("../resources/someImage.png") left top no-repeat
     transparent;
-  font-family: sans-serif;
+  font-family: sans-serif; // WARNING 9: Expected "font-family" to come before "background" (order/properties-order)
   font-size: 1.2em;
 
-  /* ERROR 5: Expected "position" to come before "font-size" (order/properties-order) */
+  /* WARNING 10: Expected "position" to come before "font-size" (order/properties-order) */
   position: absolute;
 
-  &:after {
-    /* 1. generated content */
+  &:after { // ERROR 11: Expected double colon pseudo-element notation (selector-pseudo-element-colon-notation)
     content: "Hello World";
   }
 }

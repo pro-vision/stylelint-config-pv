@@ -1,3 +1,10 @@
+# 3.0.0
+
+- Changed: use `stylelint-config-standard` and `stylelint-config-standard-scss` as the base for the rules
+- Changed: replace deprecated `stylelint-declaration-use-variable` with `stylelint-declaration-strict-value` plugin
+- Changed: add new config for prettier
+- Changed: update some rules, including the order
+
 # 2.0.4
 
 - Changed: Extend the scoped package in .stylelintrc

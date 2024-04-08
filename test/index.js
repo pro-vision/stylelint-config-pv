@@ -40,11 +40,11 @@ stylelint
   .then(data => {
     const FILEPATH = "errors.scss";
     const results = extractResults(data);
-    const expected = 8;
+    const expected = 12;
     const actual = results[FILEPATH].length;
     assert(
       actual === expected,
-      `${FILEPATH} has ${actual} errors, expected ${expected}`
+      `${FILEPATH} has ${actual} errors and warnings, expected ${expected}`
     );
     console.log(`👍  ${FILEPATH}`);
   })

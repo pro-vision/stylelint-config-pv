@@ -13,7 +13,7 @@
     "plain-css.js",
     "scss.js",
     "order.js",
-    "declaration-use-variable.js"
+    "prettier.js"
   ],
   "contributors": [
     "Bert-Ulrich Baumann <bbaumann@pro-vision.de>",
@@ -31,16 +31,20 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-pv": "2.2.2",
-    "eslint-plugin-import": "2.14.0",
-    "nodemon": "1.19.1"
+    "@pro-vision/eslint-config-pv": "4.0.0",
+    "eslint": "8.45.0",
+    "eslint-plugin-import": "2.27.5",
+    "nodemon": "1.19.1",
+    "prettier": "^3.0.0"
   },
   "dependencies": {
-    "stylelint": "9.10.1",
-    "stylelint-declaration-use-variable": "1.7.0",
-    "stylelint-order": "2.0.0",
-    "stylelint-scss": "3.10.0"
+    "stylelint": "^15.10.1",
+    "stylelint-config-clean-order": "^5.0.1",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-declaration-strict-value": "^1.9.2",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^4.0.0"
   },
   "scripts": {
     "lint": "eslint --fix *.js",

@@ -1,55 +1,52 @@
-@mixin myMagicMixin($size) {
+@mixin my-magic-mixin($size) {
+  @include my-other-mixin($size);
+
   @if $size == "12px" {
     opacity: 0;
-  }
-  @else if $size == "13px" {
+  } @else if $size == "13px" {
     opacity: 0.5;
-  }
-  @else {
+  } @else {
     opacity: 1;
-
-    @include myOtherMixin($size);
   }
 }
 
 .my-m-selector {
-  $color-red: #f00;
-
   /* 0. extends */
   @extend %_someSelector;
 
-  /* 1. generated content */
+  /* 1. variables */
+  $color-red: #f00;
 
-  /* 2. position */
+  /* 2. mixins */
+  @include my-magic-mixin(12px);
+
+  /* 3. interaction */
+  cursor: pointer;
+
+  /* 4. positioning */
   position: absolute;
   top: 0;
   left: 0;
 
-  /* 3. display + box */
+  /* 5. layout + box */
   display: block;
   width: 300px;
   height: 200px;
   padding: 20px;
-  border: 1px solid $color-red;
-  border-radius: 10px;
 
-  /* 4. color */
-  color: $color-red;
-  background: url("../resources/someImage.png") left top no-repeat
-    transparent;
-
-  /* 5. text */
+  /* 6. typography */
   font-family: sans-serif;
   font-size: 1.2em;
 
-  /* 6. other */
-  cursor: pointer;
+  /* 7. appearance */
+  color: $color-red;
+  background: url("../resources/someImage.png") left top no-repeat transparent;
+  border: 1px solid $color-red;
+  border-radius: 10px;
 
-  /* 7. mixins */
-  @include myMagicMixin(12px);
-
+  /* 8. nested rules */
   .my-m-subselector {
-    /* 3. display + box */
+    /* 3. layout + box */
     margin: 0 auto;
   }
 
@@ -61,7 +58,7 @@
     background: transparent;
   }
 
-  &:after {
+  &::after {
     /* 1. generated content */
     content: "Hello World";
   }
