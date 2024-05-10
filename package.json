@@ -1,6 +1,6 @@
 {
   "name": "@pro-vision/stylelint-config-pv",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "pro!vision stylelint configuration. Can be adapted and adjusted in each project.",
   "keywords": [
     "stylelint",
