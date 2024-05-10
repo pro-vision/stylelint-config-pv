@@ -1,3 +1,9 @@
+# 4.0.0
+
+- Changed: (BREAKING) update to stylelint@16.5.0, this needs node >= `18.12.0` (for more info including the rules which are removed incase you were using them, see [v16 changelog](https://stylelint.io/changelog/#1600))
+- Changed: removed deprecated rule `declaration-colon-newline-after` which was already deactivated
+- Changed: replace deprecated rule `at-import-partial-extension-blacklist` with `with at-import-partial-extension-disallowed-list`
+
 # 3.0.0
 
 - Changed: use `stylelint-config-standard` and `stylelint-config-standard-scss` as the base for the rules
