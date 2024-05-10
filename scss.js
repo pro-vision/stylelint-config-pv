@@ -24,7 +24,7 @@ module.exports = {
     "scss/at-function-pattern": namingPatter,
     "scss/at-mixin-argumentless-call-parentheses": null,
     "scss/at-mixin-pattern": namingPatter,
-    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/at-import-partial-extension-disallowed-list": ["scss"],
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-empty-line-before": null,
     "scss/dollar-variable-pattern": namingPatter,

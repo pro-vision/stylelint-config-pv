@@ -21,7 +21,6 @@ module.exports = {
     ],
     "comment-no-empty": true,
     "custom-property-pattern": namingPatter,
-    "declaration-colon-newline-after": null,
     "declaration-no-important": true,
     "keyframes-name-pattern": namingPatter,
     "length-zero-no-unit": [
