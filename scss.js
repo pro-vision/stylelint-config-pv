@@ -1,4 +1,4 @@
-/* eslint quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
+/* eslint @stylistic/quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
 /* changing rule because we want this file to be JSON-like, in case we need to copy it and paste it somewhere */
 
 const { "rules": plainCssRules } = require("./plain-css");

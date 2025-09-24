@@ -1,4 +1,4 @@
-/* eslint quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
+/* eslint @stylistic/quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
 
 // using properties order from "stylelint-config-clean-order" but with different overall order (e.g. mixins, variables etc)
 const cleanOrderConfig = require("stylelint-config-clean-order");
