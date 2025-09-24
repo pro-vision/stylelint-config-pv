@@ -32,8 +32,8 @@
   "main": "index.js",
   "devDependencies": {
     "@pro-vision/eslint-config-pv": "5.0.0",
-    "nodemon": "1.19.1",
-    "prettier": "^3.0.0"
+    "nodemon": "3.1.10",
+    "prettier": "3.6.2"
   },
   "dependencies": {
     "stylelint": "^16.5.0",
