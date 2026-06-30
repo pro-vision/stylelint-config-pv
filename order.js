@@ -1,7 +1,7 @@
 /* eslint @stylistic/quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
 
 // using properties order from "stylelint-config-clean-order" but with different overall order (e.g. mixins, variables etc)
-const cleanOrderConfig = require("stylelint-config-clean-order");
+import cleanOrderConfig from "stylelint-config-clean-order";
 
 const propertiesOrder = cleanOrderConfig.rules["order/properties-order"];
 propertiesOrder[1] = {
@@ -10,7 +10,7 @@ propertiesOrder[1] = {
   "emptyLineMinimumPropertyThreshold": 1000,
 };
 
-module.exports = {
+export default {
   "plugins": ["stylelint-order"],
   "rules": {
     // top level order - i.e., @extend before CSS rules etc

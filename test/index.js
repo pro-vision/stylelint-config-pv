@@ -1,15 +1,17 @@
 /* eslint-disable no-console */
-/* eslint global-require: "off" */
 
-const stylelint = require("stylelint");
-const path = require("path");
-const assert = require("assert");
+import path from "node:path";
+import assert from "node:assert";
+
+import stylelint from "stylelint";
+
+import config from "../index.js";
 
 // ////////////////////// test.scss
 
 stylelint
   .lint({
-    config: require(".."),
+    config,
     files: "./test/test.scss",
     formatter: Function.prototype,
   })
@@ -33,7 +35,7 @@ stylelint
 
 stylelint
   .lint({
-    config: require(".."),
+    config,
     files: "./test/errors.scss",
     formatter: Function.prototype,
   })
