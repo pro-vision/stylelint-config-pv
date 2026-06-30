@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: [
     "./scss.js",
     "./order.js",

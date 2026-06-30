@@ -1,5 +1,5 @@
 /* eslint @stylistic/quote-props: [2, "always", {"keywords": false, "unnecessary": true}] */
 
-module.exports = {
+export default {
   "extends": ["stylelint-prettier/recommended"],
 };

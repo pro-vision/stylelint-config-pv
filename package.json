@@ -22,6 +22,10 @@
     "Ingo Fahrentholz <ifahrentholz@pro-vision.de>"
   ],
   "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pro-vision/stylelint-config-pv.git"
@@ -32,22 +36,21 @@
   "main": "index.js",
   "devDependencies": {
     "@pro-vision/eslint-config-pv": "5.0.0",
-    "nodemon": "3.1.10",
     "prettier": "3.6.2"
   },
   "dependencies": {
-    "stylelint": "^16.5.0",
-    "stylelint-config-clean-order": "^5.4.2",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-declaration-strict-value": "^1.10.4",
-    "stylelint-order": "^6.0.4",
-    "stylelint-prettier": "^5.0.0"
+    "stylelint": "17.14.0",
+    "stylelint-config-clean-order": "10.0.0",
+    "stylelint-config-standard": "40.0.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "stylelint-declaration-strict-value": "1.11.1",
+    "stylelint-order": "8.1.1",
+    "stylelint-prettier": "5.0.3"
   },
   "scripts": {
     "lint": "eslint *.js",
     "test": "node test/index.js",
-    "dev": "nodemon -e js,scss --watch test test/index.js"
+    "dev": "node --watch --watch-path=test test/index.js"
   },
   "homepage": "https://github.com/pro-vision/stylelint-config-pv#readme",
   "directories": {

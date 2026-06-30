@@ -1,6 +1,6 @@
-const pvESLintJS = require("@pro-vision/eslint-config-pv/javascript");
+import pvESLintJS from "@pro-vision/eslint-config-pv/javascript";
 
-module.exports = [
+export default [
   ...pvESLintJS,
   {
     rules: {

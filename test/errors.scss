@@ -30,16 +30,22 @@
   border-radius: 10px;
 
   /* ERROR 7: Expected variable, function or keyword for "#000" of "color" (scale-unlimited/declaration-strict-value) */
-  color: #000; // WARNING 8: Expected "color" to come before "border-radius" (order/properties-order)
+  color: #000;
   background: url("../resources/someImage.png") left top no-repeat
     transparent;
-  font-family: sans-serif; // WARNING 9: Expected "font-family" to come before "background" (order/properties-order)
+  font-family: sans-serif; // WARNING 8: Expected "font-family" to come before "background" (order/properties-order)
   font-size: 1.2em;
 
-  /* WARNING 10: Expected "position" to come before "font-size" (order/properties-order) */
+  /* WARNING 9: Expected "position" to come before "font-size" (order/properties-order) */
   position: absolute;
+}
 
-  &:after { // ERROR 11: Expected double colon pseudo-element notation (selector-pseudo-element-colon-notation)
+.some-class {
+  &:after { // ERROR 10: Expected double colon pseudo-element notation (selector-pseudo-element-colon-notation)
     content: "Hello World";
+  }
+
+  &--NOT_KEBAB { // ERROR 11: Expected kebab-case for nested concatenated class name (scss/selector-class-pattern)
+    top: 0;
   }
 }

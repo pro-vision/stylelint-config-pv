@@ -8,7 +8,7 @@ const namingPatter = [
   }
 ];
 
-module.exports = {
+export default {
   "extends": ["stylelint-config-standard"],
   "rules": {
     "at-rule-empty-line-before": [
